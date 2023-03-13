@@ -20,22 +20,22 @@ namespace PadarikeisAutomotors.Controllers
 		[HttpGet]
 		public async Task<ActionResult<IEnumerable<Capacitacion>>> GetCapacitacion()
 		{
-			if (_context.Capacitacion == null)
+			if (_context.Capacitaciones == null)
 			{
 				return NotFound();
 			}
-			return await _context.Capacitacion.ToListAsync();
+			return await _context.Capacitaciones.ToListAsync();
 		}
 
 		// GET: api/Capacitacion/5
 		[HttpGet("{id}")]
 		public async Task<ActionResult<Capacitacion>> GetCapacitacion(int id)
 		{
-			if (_context.Capacitacion == null)
+			if (_context.Capacitaciones == null)
 			{
 				return NotFound();
 			}
-			var capacitacion = await _context.Capacitacion.FindAsync(id);
+			var capacitacion = await _context.Capacitaciones.FindAsync(id);
 
 			if (capacitacion == null)
 			{

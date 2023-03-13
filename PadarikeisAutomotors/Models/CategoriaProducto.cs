@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace PadarikeisAutomotors.Models;
+﻿namespace PadarikeisAutomotors.Models;
 
 public partial class CategoriaProducto
 {
-    public int CategoriaProductoId { get; set; }
+	public int CategoriaProductoId { get; set; }
 
-    public string Nombre { get; set; } = null!;
+	public string Nombre { get; set; } = null!;
 
-    public virtual ICollection<Producto> Productos { get; } = new List<Producto>();
+	public virtual ICollection<Producto> Productos { get; } = new List<Producto>();
 }

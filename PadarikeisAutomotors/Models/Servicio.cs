@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace PadarikeisAutomotors.Models;
+﻿namespace PadarikeisAutomotors.Models;
 
 public partial class Servicio
 {
-    public int ServicioId { get; set; }
+	public int ServicioId { get; set; }
 
-    public string Imagen { get; set; } = null!;
+	public string Imagen { get; set; } = null!;
 
-    public string Nombre { get; set; } = null!;
+	public string Nombre { get; set; } = null!;
 
-    public double Precio { get; set; }
+	public double Precio { get; set; }
 
-    public string Texto { get; set; } = null!;
+	public string Texto { get; set; } = null!;
+
+	public virtual ICollection<ServicioRegistrado> ServiciosRegistrados { get; } = new List<ServicioRegistrado>();
 }
